@@ -1,0 +1,131 @@
+body, html{
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles - applies to all elements */
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Main container - CV layout wrapper */
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 210mm;  /* A4 width */
+  height: 297mm; /* A4 height */
+  background-color: #eee;
+}
+
+/* Common styles for left and right sections */
+.left, .right {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 100%;
+  text-shadow: 2px 2px 3px #00000040; /* Adds depth to text */
+}
+
+/* Left sidebar - contact info, skills, languages */
+.left {
+  width: 70mm;
+  background-color: #d37b28; /* Orange background */
+  box-shadow: 4px 0px 6px #00000040; /* Drop shadow for depth */
+  z-index: 1;
+  color: #eee; /* White text */
+}
+
+/* Spacing for all elements in left sidebar */
+.left > * {
+  margin: 4mm;
+}
+
+/* Remove top margin for headings and paragraphs in left sidebar */
+.left h1, .left p {
+  margin-top: 0;
+}
+
+/* Horizontal rule styling for left sidebar */
+.left hr {
+  border-top: solid 1px #fff; /* White line */
+}
+
+/* Right section - main content area */
+.right {
+  width: 140mm;
+  background-color: rgb(255, 234, 215); /* Light orange background */
+  z-index: 0;
+  color: #333; /* Dark gray text */
+}
+
+/* Spacing for all elements in right section */
+.right > * {
+  margin: 8mm;
+  margin-bottom: 0;
+}
+
+/* Main heading styling in right section */
+.right > h1 {
+  color: #d37b28; /* Orange color matching left sidebar */
+  font-size: 32pt;
+}
+
+/* Horizontal rule styling for right section */
+.right hr {
+  border-top: solid 2px #333; /* Dark gray line */
+}
+
+/* Paragraph styling in right section */
+.right p {
+  margin-top: 4mm;
+  font-size: 12pt;
+}
+
+/* Global paragraph styling */
+p {
+  font-size: 14pt;
+}
+
+/* Profile picture styling */
+.pfp {
+  border-radius: 50vw; /* Makes image circular */
+  box-shadow: 4px 4px 6px #00000040; /* Drop shadow for depth */
+}
+
+/* Icon styling for contact information */
+.icon {
+  width: 16pt;
+}
+
+/* Progress bar container for language skills */
+.progressBar {
+  width: auto;
+  height: 1.5mm;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 2mm; /* Space between progress segments */
+}
+
+/* Individual progress bar segments */
+.progressBar > div {
+  flex: 1 0 6mm; /* Equal width segments */
+}
+
+/* Filled progress bar segments */
+.bgw {
+  background-color: #fff; /* White filled segments */
+}
+
+/* Empty progress bar segments */
+.bgempty {
+  background-color: #ffffff40; /* Semi-transparent white */
+}
+
+/* Language skill container */
+.languageDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 2mm; /* Space between language items */
+}
